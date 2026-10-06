@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: java-postgres-ms
+    environment:
+      POSTGRES_DB: ms_user
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"
+
+volumes:
+  postgres_data:
